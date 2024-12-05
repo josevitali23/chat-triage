@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sala de Espera Médica</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</head>
+<body class="bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-lg">
+        <div class="text-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-green-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+            </svg>
+            <h1 class="text-2xl font-bold text-green-800">Sala de Espera Virtual</h1>
+            <p class="text-gray-600 mt-2">Un médico se comunicará contigo pronto</p>
+        </div>
+
+        <div class="bg-green-50 p-4 rounded-lg mb-6">
+            <div class="flex items-center mb-4">
+                <i data-feather="clock" class="text-green-600 mr-3"></i>
+                <span class="font-semibold text-green-800">Tiempo de Espera Estimado: 20-30 minutos</span>
+            </div>
+            <div class="flex items-center">
+                <i data-feather="message-circle" class="text-green-600 mr-3"></i>
+                <span class="text-gray-700">Mantén abierta esta ventana para recibir actualizaciones</span>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <div class="inline-block bg-green-100 p-4 rounded-lg mb-4">
+                <h2 class="text-xl font-semibold text-green-900 mb-2">Qué Esperar</h2>
+                <ul class="text-left text-gray-700 space-y-2">
+                    <li class="flex items-center">
+                        <i data-feather="check-circle" class="text-green-500 mr-2"></i>
+                        Un médico revisará tu caso detalladamente
+                    </li>
+                    <li class="flex items-center">
+                        <i data-feather="check-circle" class="text-green-500 mr-2"></i>
+                        Podrías recibir preguntas adicionales
+                    </li>
+                    <li class="flex items-center">
+                        <i data-feather="check-circle" class="text-green-500 mr-2"></i>
+                        Se generará un plan de atención personalizado
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mt-6 text-center">
+            <div class="inline-flex items-center bg-blue-100 text-blue-800 p-3 rounded-lg">
+                <i data-feather="message-square" class="mr-2"></i>
+                <span class="font-medium">Esperando asignación de médico</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        feather.replace(); // Initialize Feather icons
+        
+        // Countdown timer
+        const estimatedWaitTime = 30 * 60; // 30 minutes in seconds
+        const timerDisplay = document.createElement('div');
+        timerDisplay.className = 'fixed bottom-4 right-4 bg-white p-3 rounded-lg shadow-lg';
+        document.body.appendChild(timerDisplay);
+
+        function updateCountdown() {
+            const minutes = Math.floor(estimatedWaitTime / 60);
+            const seconds = estimatedWaitTime % 60;
+            timerDisplay.textContent = `Tiempo estimado: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+            
+            if (estimatedWaitTime > 0) {
+                estimatedWaitTime--;
+                setTimeout(updateCountdown, 1000);
+            }
+        }
+
+        updateCountdown();
+    </script>
+</body>
+</html>
