@@ -56,9 +56,9 @@ io.on('connection', (socket) => {
         case 'video-consult':
           socket.emit('redirect', '/video-consulta');
           break;
-        // case 'waiting-room':
-        //   socket.emit('redirect', '/sala-espera');
-        //   break;
+        case 'waiting-room':
+          socket.emit('redirect', '/sala-espera');
+          break;
         default:
           socket.emit('assistant-message', claudeResponse.message);
       }

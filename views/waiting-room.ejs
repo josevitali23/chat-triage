@@ -2,80 +2,110 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sala de Espera Médica</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
+    <style>
+        :root {
+            --primary: #6B46C1;
+            --secondary: #553C9A;
+            --accent: #9F7AEA;
+            --light: #FAF5FF;
+        }
+
+        body {
+            background: linear-gradient(135deg, #FAF5FF 0%, #E9D8FD 100%);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        .custom-shadow {
+            box-shadow: 0 4px 20px rgba(107, 70, 193, 0.15);
+        }
+
+        .pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+    </style>
 </head>
-<body class="bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center min-h-screen">
-    <div class="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-lg">
-        <div class="text-center mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-green-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-            </svg>
-            <h1 class="text-2xl font-bold text-green-800">Sala de Espera Virtual</h1>
-            <p class="text-gray-600 mt-2">Un médico se comunicará contigo pronto</p>
+<body class="min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white p-8 rounded-2xl custom-shadow w-full max-w-lg">
+        <div class="text-center mb-8">
+            <div class="rounded-full bg-purple-50 p-4 inline-block mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                </svg>
+            </div>
+            <h1 class="text-2xl font-bold text-purple-900">Sala de Espera Virtual</h1>
+            <p class="text-purple-600 mt-2">Un médico se comunicará contigo pronto</p>
         </div>
 
-        <div class="bg-green-50 p-4 rounded-lg mb-6">
+        <div class="bg-purple-50 p-6 rounded-xl mb-8 border border-purple-100">
             <div class="flex items-center mb-4">
-                <i data-feather="clock" class="text-green-600 mr-3"></i>
-                <span class="font-semibold text-green-800">Tiempo de Espera Estimado: 20-30 minutos</span>
+                <i data-feather="clock" class="text-purple-600 mr-3"></i>
+                <span class="font-semibold text-purple-800">Tiempo de Espera Estimado: 20-30 minutos</span>
             </div>
             <div class="flex items-center">
-                <i data-feather="message-circle" class="text-green-600 mr-3"></i>
-                <span class="text-gray-700">Mantén abierta esta ventana para recibir actualizaciones</span>
+                <i data-feather="message-circle" class="text-purple-600 mr-3"></i>
+                <span class="text-purple-700">Mantén abierta esta ventana para recibir actualizaciones</span>
             </div>
         </div>
 
-        <div class="text-center">
-            <div class="inline-block bg-green-100 p-4 rounded-lg mb-4">
-                <h2 class="text-xl font-semibold text-green-900 mb-2">Qué Esperar</h2>
-                <ul class="text-left text-gray-700 space-y-2">
-                    <li class="flex items-center">
-                        <i data-feather="check-circle" class="text-green-500 mr-2"></i>
-                        Un médico revisará tu caso detalladamente
-                    </li>
-                    <li class="flex items-center">
-                        <i data-feather="check-circle" class="text-green-500 mr-2"></i>
-                        Podrías recibir preguntas adicionales
-                    </li>
-                    <li class="flex items-center">
-                        <i data-feather="check-circle" class="text-green-500 mr-2"></i>
-                        Se generará un plan de atención personalizado
-                    </li>
-                </ul>
-            </div>
+        <div class="bg-white border border-purple-100 rounded-xl p-6 mb-8">
+            <h2 class="text-xl font-semibold text-purple-900 mb-4">Qué Esperar</h2>
+            <ul class="space-y-4">
+                <li class="flex items-start">
+                    <i data-feather="check-circle" class="text-purple-500 mr-3 mt-1"></i>
+                    <span class="text-purple-700">Un médico revisará tu caso detalladamente</span>
+                </li>
+                <li class="flex items-start">
+                    <i data-feather="check-circle" class="text-purple-500 mr-3 mt-1"></i>
+                    <span class="text-purple-700">Podrías recibir preguntas adicionales</span>
+                </li>
+                <li class="flex items-start">
+                    <i data-feather="check-circle" class="text-purple-500 mr-3 mt-1"></i>
+                    <span class="text-purple-700">Se generará un plan de atención personalizado</span>
+                </li>
+            </ul>
         </div>
 
-        <div class="mt-6 text-center">
-            <div class="inline-flex items-center bg-blue-100 text-blue-800 p-3 rounded-lg">
-                <i data-feather="message-square" class="mr-2"></i>
+        <div class="flex justify-center">
+            <div class="inline-flex items-center bg-purple-600 text-white px-6 py-3 rounded-xl pulse">
+                <i data-feather="user-plus" class="mr-2"></i>
                 <span class="font-medium">Esperando asignación de médico</span>
             </div>
         </div>
     </div>
 
-    <script>
-        feather.replace(); // Initialize Feather icons
-        
-        // Countdown timer
-        const estimatedWaitTime = 30 * 60; // 30 minutes in seconds
-        const timerDisplay = document.createElement('div');
-        timerDisplay.className = 'fixed bottom-4 right-4 bg-white p-3 rounded-lg shadow-lg';
-        document.body.appendChild(timerDisplay);
+    <div id="timer" class="fixed bottom-4 right-4 bg-white p-4 rounded-xl custom-shadow flex items-center space-x-2">
+        <i data-feather="clock" class="text-purple-600"></i>
+        <span class="text-purple-800 font-medium">Tiempo restante: <span id="countdown">30:00</span></span>
+    </div>
 
-        function updateCountdown() {
-            const minutes = Math.floor(estimatedWaitTime / 60);
-            const seconds = estimatedWaitTime % 60;
-            timerDisplay.textContent = `Tiempo estimado: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    <script>
+        feather.replace();
+        
+        let timeLeft = 30 * 60; // 30 minutes in seconds
+        const countdownDisplay = document.getElementById('countdown');
+        
+        function updateTimer() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            countdownDisplay.textContent = 
+                `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
             
-            if (estimatedWaitTime > 0) {
-                estimatedWaitTime--;
-                setTimeout(updateCountdown, 1000);
+            if (timeLeft > 0) {
+                timeLeft--;
+                setTimeout(updateTimer, 1000);
             }
         }
-
-        updateCountdown();
+        
+        updateTimer();
     </script>
 </body>
 </html>

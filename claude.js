@@ -34,7 +34,7 @@ async function processChatWithClaude(chatHistory) {
     The options are
     1. EMERGENCY
     2. VIDEOCONSULT
-    3. CHAT
+    3. CHAT CONSULT
   `;
 
   try {
@@ -51,12 +51,14 @@ async function processChatWithClaude(chatHistory) {
     // Custom logic to determine action and response
     const responseText = response.content[0].text;
     console.log(responseText)
-    let action = 'waiting-room';
+    let action = '';
     
     if (responseText.includes('EMERGENCY') || responseText.includes('EMERGENCY')) {
       action = 'emergency';
     } else if (responseText.includes('VIDEOCONSULT') || responseText.includes('VIDEOCONSULTA')) {
       action = 'video-consult';
+    } else if (responseText.includes('CHAT CONSULT')) {
+      action = 'waiting-room';
     }
 
     return {
