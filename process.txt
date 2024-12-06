@@ -1,0 +1,44 @@
+<evaluation_process>
+1. Reported Symptoms:
+- Dolor de espalda baja (lower back pain)
+
+2. Initial Categorization:
+Initial category: Green/Blue
+Reasoning: 
+- Lower back pain is typically a non-emergency condition
+- Without additional information about severity or associated symptoms, it appears to be a low-risk situation
+- No immediate life-threatening indicators mentioned
+
+3. Follow-up Questions:
+a) "¿Desde cuándo tiene el dolor y fue causado por algún golpe o accidente?"
+(To determine if there's any trauma involvement that could indicate more serious conditions)
+
+b) "¿El dolor se irradia hacia las piernas o está acompañado de entumecimiento?"
+(To assess possible nerve involvement or radiculopathy)
+
+c) "¿Puede moverse normalmente o el dolor le impide realizar sus actividades diarias?"
+(To evaluate severity and impact on daily activities)
+
+4. Final Category Analysis:
+Without additional information, maintaining Green/Blue categorization because:
+- Lower back pain is common
+- No indication of trauma or severe symptoms
+- No red flags mentioned in initial complaint
+
+5. Final Category: Green
+Recommended Action: Suggest video consultation or chat consultation within the next hours
+
+</evaluation_process>
+
+<response>
+Hola, lamento que estés experimentando dolor de espalda. Para poder ayudarte mejor, necesito algunos detalles adicionales:
+
+- ¿Desde cuándo tiene el dolor y fue causado por algún golpe o accidente?
+- ¿El dolor se irradia hacia las piernas o está acompañado de entumecimiento?
+- ¿Puede moverse normalmente o el dolor le impide realizar sus actividades diarias?
+
+Por el momento, te sugiero programar una videoconsulta o chat médico en las próximas horas para que un profesional pueda evaluarte adecuadamente y recomendarte el mejor tratamiento para tu caso.
+
+Mientras tanto, puedes aplicar compresas frías o calientes (lo que te resulte más cómodo) y evitar movimientos que aumenten el dolor. Si el dolor empeora significativamente o aparecen nuevos síntomas, no dudes en avisarnos.
+
+¿Te gustaría que te ayude a agendar una videoconsulta ahora?

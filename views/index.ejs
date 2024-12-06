@@ -60,7 +60,7 @@
     <main class="max-w-4xl mx-auto px-4 py-8">
         <div class="bg-white rounded-2xl custom-shadow overflow-hidden">
             <div class="p-6 border-b border-purple-100">
-                <h1 class="text-2xl font-bold text-purple-900">Tu Consulta Médica Virtual V2</h1>
+                <h1 class="text-2xl font-bold text-purple-900">Tu Consulta Médica Virtual</h1>
                 <p class="mt-2 text-purple-600">Describe tus síntomas o realiza tu consulta médica</p>
             </div>
 
@@ -150,7 +150,7 @@
         });
 
         function sendMessage() {
-            const message = messageInput.value.trim();
+            const message = `<user_symptoms>${messageInput.value.trim()}</user_symptoms>` ;
             if (message) {
                 removeLoadingMessage();
                 appendMessage(message, true);
