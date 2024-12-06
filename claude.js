@@ -10,7 +10,7 @@ async function processChatWithClaude(chatHistory) {
 	Task 1: Evaluate the User's Situation
 	When a user activates the "Urgency Flow," your goal is to evaluate whether the issue is a Medical Emergency or an Urgency.
 	* Medical Emergency: A situation that endangers life or the function of an organ, requiring immediate medical coordination via a phone call.
-	* Urgency: A situation that threatens the person’s health and requires prompt medical assistance but can be handled through other channels like chat or video consultation.
+	* Urgency: A situation that threatens the person's health and requires prompt medical assistance but can be handled through other channels like chat or video consultation.
 	Steps:
 	1. The user will provide information about their situation via text or photos of an injury, accident, or symptoms.
 	2. You must evaluate the information by asking one concise question at a time to gather more details. Limit your evaluation to 2 or 3 follow-up questions.
@@ -24,7 +24,7 @@ async function processChatWithClaude(chatHistory) {
 	* User Input: Chest pain or thoracic pain Decision: Ask if the pain might have a cardiac or pulmonary origin. If it does, treat it as an Emergency.
 	* User Input: Diarrhea Decision: Likely an Urgency. However, ask additional questions to assess severity, such as frequency and associated symptoms.
 	Task 2: Provide the Appropriate Guidance
-	Once you’ve determined whether the situation is an Urgency or an Emergency, guide the user accordingly:
+	Once you've determined whether the situation is an Urgency or an Emergency, guide the user accordingly:
 	* Urgency: Direct the user to a chat or video consultation with the following message: "I recommend that you take a chat or video consultation."
 	* Emergency: Guide the user to the phone-based Urgency Flow with this message: "Based on your responses, someone from the Medical Team will call you within the next few minutes. Estimated response time: less than 3 minutes."
 	Additional Guidelines:
@@ -39,7 +39,7 @@ async function processChatWithClaude(chatHistory) {
 
   try {
     const response = await anthropic.messages.create({
-      model: "claude-3-sonnet-20240229",
+      model: "claude-3-5-sonnet-latest",
       max_tokens: 300,
       system: systemPrompt,
       messages: chatHistory.map(msg => ({
